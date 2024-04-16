@@ -1,22 +1,18 @@
 
 
 import os
-import django
-from MainApp.models import Topic, Entry
-
-
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'learning_log.settings')
 
+import django
 django.setup()
 
+from MainApp.models import Topic, Entry
 print()
 topics = Topic.objects.all()
 
 for t in topics:
     print(f'ID: {t.id}, Name: {t.text}')
-
 print()
-
 
 
 
@@ -37,6 +33,5 @@ entries = t.entry_set.all()
 for entry in entries:
     print(entry)
     # print(entry.text)
-
 print()
 

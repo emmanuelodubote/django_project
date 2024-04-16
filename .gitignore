@@ -1,5 +1,6 @@
 
 django_venv/
+class_slides/
 
 *.pptx
 # *.py
