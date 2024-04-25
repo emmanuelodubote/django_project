@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'MainApp',           #my app
+    'users',             #making users to login to view/alter website info
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

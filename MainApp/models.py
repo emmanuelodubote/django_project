@@ -5,13 +5,14 @@ class Topic(models.Model):
     text = models.CharField(max_length=200)
     date_added = models.DateTimeField(auto_now_add=True)
 
-    def __str__(self):
+    def __str__(self):          #what users see on their screen
         return self.text
 
 
 class Entry(models.Model):
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE) #here topic isn't just an attr (topic id) but an obj that contains the id (bcos of the FK)
-    text = models.TextField()
+    text = models.TextField()                               #empty bracket means required field
+    # text = models.TextField(blank = True, null = True)    #for non required fields
     date_added = models.DateTimeField(auto_now_add=True)
 
     class Meta:
